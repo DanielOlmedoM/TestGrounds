@@ -8,6 +8,7 @@ cd ..:Back up to prevoiuos directory
 pwd: Present working directory
 mkdir "name": create new directory
 touch "name": create file
+rm "name": remove file
 
 01-03 (Git):
 git clone <url>: Clones git repository
