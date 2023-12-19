@@ -29,7 +29,7 @@ function play() {
 
 function selection() {
 
-    let userChoice = window.prompt("Select: R,P,S");
+    let userChoice = window.prompt("Select: r,p,s");
     function getRandomInt(min, max) {
         min = Math.ceil(min); // Round up to the nearest integer
         max = Math.floor(max); // Round down to the nearest integer
@@ -39,55 +39,55 @@ function selection() {
       let randomInteger = getRandomInt(1, 3);
       console.log("Rand. int " + randomInteger);
 
-if(userChoice == "R" && randomInteger == 1) {
+if(userChoice == "r" && randomInteger == 1) {
     console.log("You chose rock");    
     console.log("AI chose rock");
     ties.push(1);
 } 
 
-else if (userChoice == "R" && randomInteger == 2) {
+else if (userChoice == "r" && randomInteger == 2) {
     console.log("You chose rock");    
     console.log("AI chose paper");
     loses.push(1);
 }
 
-else if (userChoice == "R" && randomInteger == 3) {
+else if (userChoice == "r" && randomInteger == 3) {
     console.log("You chose rock");    
     console.log("AI chose scissors");
     wins.push(1);
 }
 
-else if(userChoice == "P" && randomInteger == 1) {
+else if(userChoice == "p" && randomInteger == 1) {
     console.log("You chose paper");    
     console.log("AI chose rock");
     wins.push(1);
 } 
 
-else if (userChoice == "P" && randomInteger == 2) {
+else if (userChoice == "p" && randomInteger == 2) {
     console.log("You chose paper");    
     console.log("AI chose paper");
     ties.push(1);
 }
 
-else if (userChoice == "P" && randomInteger == 3) {
+else if (userChoice == "p" && randomInteger == 3) {
     console.log("You chose paper");    
     console.log("AI chose scissors");
     loses.push(1);
 }
 
-else if(userChoice == "S" && randomInteger == 1) {
+else if(userChoice == "s" && randomInteger == 1) {
     console.log("You chose scissors");    
     console.log("AI chose rock");
     loses.push(1);
 } 
 
-else if (userChoice == "S" && randomInteger == 2) {
+else if (userChoice == "s" && randomInteger == 2) {
     console.log("You chose scissors");    
     console.log("AI chose paper");
     wins.push(1);
 }
 
-else if (userChoice == "S" && randomInteger == 3) {
+else if (userChoice == "s" && randomInteger == 3) {
     console.log("You chose scissors");    
     console.log("AI chose scissors");
     ties.push(1);
