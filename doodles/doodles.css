@@ -33,7 +33,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -47,7 +47,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -60,7 +60,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -73,7 +73,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -86,7 +86,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -99,7 +99,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -112,7 +112,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -125,7 +125,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -138,7 +138,7 @@ header h1 {
     background-color: rgb(255, 255, 255);
     width:100%;
     scale: 0 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -165,7 +165,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
@@ -179,7 +179,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
@@ -192,7 +192,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
@@ -205,7 +205,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
@@ -218,7 +218,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
@@ -231,7 +231,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
@@ -244,7 +244,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
@@ -257,7 +257,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
@@ -270,7 +270,7 @@ header h1 {
     background-color: rgb(0, 0, 0);
     width:100%;
     scale: 1 1;
-    transform-origin: left;
+    /* transform-origin: left; */
     animation: eio-scroll-watcher ease-in-out;
     animation-timeline: scroll();
 }
