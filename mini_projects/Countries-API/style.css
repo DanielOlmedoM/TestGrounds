@@ -1,0 +1,25 @@
+body {
+    background-color: teal;
+}
+
+header {
+    background-color: burlywood;
+    height: 5vh;
+}
+
+.main {
+    background-color: steelblue;
+    display: flex;
+    height: 90%;
+    margin: 1rem;
+}
+
+.search-side {
+    background-color: chocolate;
+    flex: 1;
+}
+
+.result-side {
+    background-color: wheat;
+    flex: 2;
+}
