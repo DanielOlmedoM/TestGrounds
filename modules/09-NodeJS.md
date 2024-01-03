@@ -63,11 +63,11 @@ Template literals are enclosed by backticks ( ) instead of single or double quot
 
 09-11(Process-argv):
 In Node.js, process.argv is an array that contains command-line arguments passed to the Node.js process. The process object is a global object in Node.js that provides information about, and control over, the current Node.js process.
+node myscript.js yourValue
 
 09-13(Read/write file):
 // fs is a Node standard library package for reading and writing files
 const fs = require('fs');
-node myscript.js yourValue
 
 09-15(Modularization):
 // module.exports is an object we use to store variables or methods
