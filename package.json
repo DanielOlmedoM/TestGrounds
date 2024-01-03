@@ -1,0 +1,22 @@
+{
+  "name": "testgrounds-1",
+  "version": "1.0.0",
+  "description": "theoretical review",
+  "main": "test.js",
+  "scripts": {
+    "test": "runtest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielOlmedoM/TestGrounds.git"
+  },
+  "author": "DOM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielOlmedoM/TestGrounds/issues"
+  },
+  "homepage": "https://github.com/DanielOlmedoM/TestGrounds#readme",
+  "dependencies": {
+    "inquirer": "^9.2.12"
+  }
+}
