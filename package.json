@@ -2,7 +2,7 @@
   "name": "testgrounds-1",
   "version": "1.0.0",
   "description": "theoretical review",
-  "main": "test.js",
+  "main": "script.js",
   "scripts": {
     "test": "runtest"
   },
