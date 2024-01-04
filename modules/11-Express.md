@@ -89,3 +89,49 @@ app.put('api/pets/:pet_id, (req,res) => {
     //Logic to update pet
     res.json('Pet updated')
 });
+
+11-01 (Setup):
+Create file: server.js
+npm install express
+public folder
+node server.js
+
+11-03 (API-HTML-Routes):
+app.get('/api', (req, res) => {
+  res.json({
+    term: 'api',
+    description:
+      'An application programming interface, is a computing interface that defines interactions between multiple software intermediaries',
+  });
+});
+
+11-05 (Query-params):
+Query parameters, also known as query strings or URL parameters, are a way to pass data to a web server as part of a URL. They are commonly used in HTTP requests, particularly in the context of web development and APIs.
+Query parameters are appended to the end of a URL and consist of key-value pairs separated by ampersands (&). 
+
+fetch('https://api.example.com/data?category=tech&limit=10')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Fetch error:', error));
+
+11-07 (GET-Fetch):
+Index.js file inside of public folder, thats the script that runs client side. 
+
+11-09 (Static-assets):
+server.js`, we can accomplish the same functionality by implementing static middleware.
+* Make sure that you have nodemon installed globally. To check run `nodemon --version`. If the command isn't found, run `npm i -g nodemon`
+Next, we start `server.js` file by running `nodemon server.js`
+In the code, point out the simplicity of the [static middleware](http://expressjs.com/en/4x/api.html#express.static) approach.
+
+11-11 (Insomnia):
+Use thunder client instead. (VS code extensions for server requests).
+
+11-13 (POST requests):
+file postRequests.js
+
+11-15 (Body parsing):
+// Middleware for parsing application/json and urlencoded data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+POST request with thunder client, BODY has to be JSON
