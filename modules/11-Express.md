@@ -135,3 +135,106 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 POST request with thunder client, BODY has to be JSON
+
+11-17 (POST-fetch, Helpers):
+"helpers" typically refer to utility functions or middleware that aid in the development of web applications by providing common functionalities, simplifying code, or enhancing the capabilities of the Express framework.
+1-Middleware functions: Have acces to the equest, response cycle and are used for authentication, loggin, error handling and more. 
+2- Third party middleware: External modules like body parsers, cookie parses and compression middleware. 
+3- View helpers: Used for template engines like handlebars.
+4- Error handlin: For managing errores.
+5- Routing helpers: Assist in defining and managing routes. 
+
+const PORT = 3001;
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
+);
+
+11-19 (Data-persistance):
+
+In the context of Express.js, data persistence typically refers to the ability of an application to store and retrieve data across multiple requests or sessions.
+
+1- In-memory storage: store data in memory during the lifetime of the application.
+2- Session storage: using middleware such as "express-session". Data is typically stored on the server, and a session ID is sent to the client to identify the session.
+3- Database storage: For more robust and persistent data storage, you can use databases such as MongoDB, MySQL, or PostgreSQL. Using an ORM like Sequelize. 
+
+In-memory storage is simple but doesn't persist across server restarts, session storage is suitable for user-specific data, and database storage is suitable for large-scale and persistent data.
+
+// POST request to add a review
+app.post('/api/reviews', (req, res) => {
+  // Log that a POST request was received
+  console.info(`${req.method} request received to add a review`);
+  // Destructuring assignment for the items in req.body
+  const { product, review, username } = req.body;
+  // If all the required properties are present
+  if (product && review && username) {
+    // Variable for the object we will save
+    const newReview = {
+      product,
+      review,
+      username,
+      upvotes: Math.floor(Math.random() * 100),
+      review_id: uuid(),
+    };
+    // Convert the data to a string so we can save it
+    const reviewString = JSON.stringify(newReview);
+    // Write the string to a file
+    fs.writeFile(`./db/${newReview.product}.json`, reviewString, (err) =>
+      err
+        ? console.error(err)
+        : console.log(
+            `Review for ${newReview.product} has been written to JSON file`
+          )
+    );
+    const response = {
+      status: 'success',
+      body: newReview,
+    };
+    console.log(response);
+    res.status(201).json(response);
+  } else {
+    res.status(500).json('Error in posting review');
+  }
+});
+
+11-21 (Modular routing):
+Modular routing in web development, exemplified by Express.js, involves organizing routes into separate, reusable modules. This practice enhances code organization, separates concerns, and facilitates scalability. Using the express.Router class, developers create modular route files, allowing for a cleaner structure and improved maintainability in large applications. 
+
+11-23 (Custom middleware):
+Developers can create their own middleware functions by defining a function with the signature (req, res, next).
+
+1- Creation of custom middleware:
+// Custom middleware
+const myMiddleware = (req, res, next) => {
+  // Do something with the request or response
+  console.log('Middleware executed');
+  // Call the next middleware in the stack
+  next();
+};
+
+2- Integration with Express Applicaction: "app.use" method.
+const express = require('express');
+const app = express();
+
+// Using custom middleware globally
+app.use(myMiddleware);
+
+// Applying middleware to a specific route
+app.get('/example', myMiddleware, (req, res) => {
+  res.send('Hello, Middleware!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+11-25 (Heroku):
+
+Heroku is a cloud platform that enables developers to deploy, manage, and scale applications easily. It abstracts away much of the complexity associated with infrastructure management and allows developers to focus on building and deploying their applications.
+
+Heroku simplifies application deployment with an easy-to-use platform, abstracting infrastructure complexities. It supports various languages, offers seamless scaling, provides a range of managed services, and integrates with Git for straightforward deployments. Its user-friendly interface, add-ons marketplace, and free tier make it an efficient and developer-friendly choice for hosting and managing applications.
+
+11-28 (Mini project: Complete routes)
