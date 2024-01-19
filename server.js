@@ -1,30 +1,39 @@
 const express = require('express');
-// Import and require mysql2
 const mysql = require('mysql2');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// Express middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// Connect to database
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    // MySQL username,
-    user: 'root',
-    // MySQL password
-    password: '',
-    database: 'classlist_db'
-  },
-  console.log(`Connected to the classlist_db database.`)
-);
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'classlist_db'
+}, console.log(`Connected to the classlist_db database.`));
 
-// Query database
-db.query('SELECT * FROM students', function (err, results) {
-  console.log(results);
+// Function to query the database
+const queryDatabase = () => {
+  db.query('SELECT * FROM students', function (err, results) {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(results);
+    }
+  });
+};
+
+// Call the function after the connection is established
+db.connect((err) => {
+  if (err) {
+    console.error('Error connecting to database:', err);
+  } else {
+    console.log('Connected to MySQL server');
+    // Call the function to query the database
+    queryDatabase();
+  }
 });
 
 // Default response for any other request (Not Found)

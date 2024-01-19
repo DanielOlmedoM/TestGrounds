@@ -10,7 +10,7 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "connection_test",
-            "database": "test_db",
+            "database": "classlist_db",
             "username": "root",
             "askForPassword": true
         }
