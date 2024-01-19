@@ -36,3 +36,26 @@ SCHEMAS:
 Tables are structure data in columns and rows.
 
 12-07 (CRUD insert):
+SELECT * FROM table;
+
+-- Check if Database in Use ---
+SELECT DATABASE();
+
+Insert one:
+-- Insert row into produce table --
+INSERT INTO produce (id, name)
+  VALUES (1, "apple");
+
+  Insert many:
+  -- Insert multiple produce items --
+INSERT INTO produce (id, name)
+VALUES
+    ( 1, "apple"),
+    ( 2, "orange"),
+    ( 3, "banana");
+
+12-09 (CRUD delete):
+DELETE FROM produce
+WHERE id = 2;
+
+12-11 (Connect Node):

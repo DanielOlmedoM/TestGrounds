@@ -1,14 +1,11 @@
-DROP DATABASE IF EXISTS inventory_db;
--- Creates the "inventory_db" database --
-CREATE DATABASE inventory_db;
+DROP DATABASE IF EXISTS classlist_db;
+CREATE DATABASE classlist_db;
 
--- Makes it so all of the following code will affect inventory_db --
-USE inventory_db;
+USE classlist_db;
 
--- Creates the table "produce" within inventory_db --
-CREATE TABLE produce (
-  -- Creates a numeric column called "id" which will automatically increment its default value as we create new rows --
-  id INT NOT NULL,
-  -- Makes a string column called "name" which cannot contain null --
-  name VARCHAR(100) NOT NULL
+CREATE TABLE students (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  enrolled BOOLEAN NOT NULL
 );
